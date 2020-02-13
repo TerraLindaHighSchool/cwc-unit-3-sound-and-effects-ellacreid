@@ -408,6 +408,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+--- !u!198 &571797980 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6,
+    type: 3}
+  m_PrefabInstance: {fileID: 571797979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &793101646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,6 +493,7 @@ MonoBehaviour:
   gravityModifier: 1.5
   isOnGround: 1
   gameOver: 0
+  explosionParticle: {fileID: 571797980}
 --- !u!65 &793101649
 BoxCollider:
   m_ObjectHideFlags: 0
