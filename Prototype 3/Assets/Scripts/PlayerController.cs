@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+    private Animator playerAnim;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
     public float jumpForce = 10;
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameOver = false;
-    private Animator playerAnim;
-    public ParticleSystem explosionParticle;
-    public ParticleSystem dirtParticle;
 
     // Start is called before the first frame update
     void Start()
