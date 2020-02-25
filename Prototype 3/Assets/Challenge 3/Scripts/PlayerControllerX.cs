@@ -44,7 +44,7 @@ public class PlayerControllerX : MonoBehaviour
         else
         {
             transform.position = new Vector3(transform.position.x, height);
-            playerRb.AddForce(-Vector3.up * floatForce / 5);
+            playerRb.AddForce(-Vector3.up * floatForce / 10);
         }
     }
 
@@ -69,6 +69,10 @@ public class PlayerControllerX : MonoBehaviour
 
         }
 
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            playerRb.AddForce(Vector3.up * floatForce / 10, ForceMode.Impulse);
+        }
     }
 
 }
