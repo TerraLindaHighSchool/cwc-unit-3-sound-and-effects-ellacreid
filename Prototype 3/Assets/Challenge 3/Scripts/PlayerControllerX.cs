@@ -17,6 +17,7 @@ public class PlayerControllerX : MonoBehaviour
     public AudioClip moneySound;
     public AudioClip explodeSound;
 
+    private bool isLowEnough = true;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +33,13 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // While space is pressed and player is low enough, float up
-        if (Input.GetKey(KeyCode.Space) && !gameOver)
+        if (isLowEnough == true)
         {
-            playerRb.AddForce(Vector3.up * floatForce);
+            // While space is pressed and player is low enough, float up
+            if (Input.GetKey(KeyCode.Space) && !gameOver)
+            {
+                playerRb.AddForce(Vector3.up * floatForce);
+            }
         }
     }
 
